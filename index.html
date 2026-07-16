@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <link  rel="stylesheet" href="styles.css">
+        <link  rel="stylesheet" href="./styles.css">
+        <script src="./main.js" defer></script>
         <title>My Projects</title>
     </head>
     <body>
@@ -12,16 +13,16 @@
         </header>
         <section>
             <div class="main"> 
-                <button type="button"><</button>
+                <button type="button" id="prev"><</button>
                 <div id="project">  
                     <img src="./assets/chien.jpg" alt="{image du projet}">
                     <div class="card">
-                        <h2>{project title}</h2>
-                        <p>{description}</p>
-                        <a href="">{lien vers le projet}</a>
+                        <h2>${project title}</h2>
+                        <p>${description}</p>
+                        <a href="">lien vers le projet</a>
                     </div>
                 </div>
-                <button type="button">></button>
+                <button type="button" id="next">></button>
             </div>
         </section>
         <footer>
