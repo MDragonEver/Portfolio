@@ -7,13 +7,23 @@ const project_div = info.querySelector("div");
 
 let data;
 let index_cursor = 0
-let current_project;;
+let current_project;
+
+function animate(anim) {
+    info.classList.remove("slideRight", "slideLeft");
+
+    void info.offsetWidth;
+
+    info.classList.add(anim);
+}
 
 next_button.addEventListener("click", () => {
+    animate("slideRight");
     current_project = switchProject(1, current_project);
     updateSection();
 });
 prev_button.addEventListener("click", () => {
+    animate("slideLeft");
     current_project = switchProject(-1, current_project);
     updateSection();
 });
@@ -58,5 +68,10 @@ function updateSection() {
     project_image.src = current_project.imgage_url;
     project_div.querySelector("h2").textContent = current_project.project_name;
     project_div.querySelector("p").textContent = current_project.description;
-    project_div.querySelector("a").href = current_project.link;
+    if (current_project.link === "none") {
+        project_div.querySelector("a").textContent = "";
+    } else {
+        project_div.querySelector("a").href = current_project.link;
+        project_div.querySelector("a").textContent = "Link to the github project";
+    }
 }

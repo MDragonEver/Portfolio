@@ -1,6 +1,11 @@
 *{
     margin: 0;
     padding: 0;
+    --shadow: #000;
+    --text: #fff;
+    --primary:#c7a27c;
+    --secondary: #ccd7c5;
+    --shadow-border:#8f6c78;
 }
 
 header {
@@ -8,7 +13,8 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    text-shadow: 2px 2px 4px grey;
+    color: var(--text);
+    text-shadow: 2px 2px 4px var(--shadow);
     gap:10px;
 }
 
@@ -16,17 +22,19 @@ header img {
     max-width: 500px;
     max-height: 300px;
     margin:20px;
-    box-shadow: 10px 10px 20px 8px grey;
+    box-shadow: 10px 10px 20px 8px var(--shadow-border);
     border-radius: 20px;
 }
 
 body {
     text-align: center;
+    background-color: var(--primary);
 }
 
 section{
-    background-color: wheat;
+    background-color: var(--secondary);
     height: 60vh;
+    width: 100vw;
 }
 
 .main {
@@ -37,12 +45,16 @@ section{
 }
 
 #project{
-    background: linear-gradient(to right, azure 40%, rgba(240, 255, 255, 0.133));
+    background: linear-gradient(to right, var(--primary) 60%, var(--secondary));
     display: flex;
     flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    color: var(--text);
+    text-shadow: 2px 2px 4px var(--shadow);
     margin:2rem;
     background-color: none;
-    box-shadow: 10px 10px 20px 8px grey;
+    box-shadow: 10px 10px 20px 8px var(--shadow-border);
     border-radius: 20px;
     padding:1rem;
 }
@@ -51,10 +63,19 @@ section{
     max-width: 500px;
     max-height: 500px;
     border-radius: 20px;
-    box-shadow: 10px 10px 20px 8px grey;
+    box-shadow: 10px 10px 20px 8px var(--shadow-border);
     position: relative;
     top:-17px;
     left: -40px;
+}
+
+a{
+    margin-top: 1rem;;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--shadow);
+    text-shadow: 2px 2px 4px var(--secondary);
 }
 
 .card{
@@ -72,13 +93,54 @@ button{
     height: 50px;
     background: none;
     border:none;
+    cursor:pointer;
     font-size: 48px;
-    text-shadow: 2px 2px 4px grey;
-    color:brown;
+    color: var(--text);
+    text-shadow: 2px 2px 4px var(--shadow-border);
 }
 
 footer{
     padding: 1rem;
     height: 10vh;
     text-align: center;
+    color: var(--text);
+    text-shadow: 2px 2px 4px var(--shadow);
+}
+
+.slideRight {
+    animation: slideRight 0.5s ease-out;
+}
+
+.slideLeft {
+    animation: slideLeft 0.5s ease-out;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

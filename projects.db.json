@@ -2,22 +2,21 @@
     "projects": [
         {
             "project_name": "ACHN companion App",
-            "imgage_url": "img",
-            "description": "a single description",
-            "link": "git"
+            "imgage_url": "./assets/site_ACNH.png",
+            "description": "An app for players to keep track every items in the game.",
+            "link": "https://github.com/MDragonEver/ACNH_Companion_App.git"
         },
         {
-            "project_name": "App",
-            "imgage_url": "img",
-            "description": "a single description",
-            "link": "github"
+            "project_name": "3D modelisation - phone case",
+            "imgage_url": "./assets/phone_case.png",
+            "description": "Modelisation of a phone case for my phone",
+            "link": "none"
         },
         {
-            "project_name": "App 2",
-            "imgage_url": "img",
-            "description": "a single description",
-            "link": "github"
+            "project_name": "3D modelisation - support",
+            "imgage_url": "./assets/tringle_support.png",
+            "description": "To fix my curtain rod I modelized a support adapted to the configuration of the window (no place for a regular one)",
+            "link": "none"
         }
-
     ]
 }
