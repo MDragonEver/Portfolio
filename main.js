@@ -1,9 +1,12 @@
 const projects = [];
+const dots = [];
 const info = document.getElementById("project");
 const prev_button = document.getElementById("prev");
 const next_button = document.getElementById("next");
 const project_image = info.querySelector("img");
 const project_div = info.querySelector("div");
+const section = document.getElementById("section-dot");
+
 
 let data;
 let index_cursor = 0
@@ -34,6 +37,11 @@ async function loadData() {
 
     data.projects.forEach(element => {
         projects.push(element);
+        const dot = document.createElement("span");
+        dot.id = "dot";
+        dot.name = element.project_name;
+        dots.push(dot);
+        section.appendChild(dot);
     });
     current_project = projects[index_cursor];
     updateSection();
@@ -74,4 +82,22 @@ function updateSection() {
         project_div.querySelector("a").href = current_project.link;
         project_div.querySelector("a").textContent = "Link to the github project";
     }
+    updateSelectedDot();
+}
+
+function checkProjectName() {
+    for (let i = 0; i < dots.length; i++)
+    {
+        if (dots[i].name === current_project.project_name) {
+            return dots[i];
+        }
+    }
+}
+
+function updateSelectedDot() {
+    const obj = checkProjectName();
+    dots.forEach(element => {
+        element.style.boxShadow = "none";
+    });
+    obj.style.boxShadow = "0 0 2px 2px #000";
 }
