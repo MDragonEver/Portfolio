@@ -153,3 +153,23 @@ footer{
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 480px) {
+    header img{
+        max-height: 30vh;
+    }
+
+    section {
+        max-width: 90vw;
+    }
+
+    #project img{
+        max-width: 30vw;
+        max-height: 25vh;
+    }
+
+    #project {
+        max-width: 65vw;
+        max-height: 40vh;
+    }
+}
