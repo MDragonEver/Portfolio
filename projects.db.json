@@ -2,25 +2,25 @@
     "projects": [
         {
             "project_name": "ACHN companion App",
-            "imgage_url": "./assets/site_ACNH.png",
+            "image_url": "./assets/site_ACNH.png",
             "description": "An app for players to keep track every items in the game.",
             "link": "https://github.com/MDragonEver/ACNH_Companion_App.git"
         },
         {
             "project_name": "3D model - phone case",
-            "imgage_url": "./assets/phone_case.png",
+            "image_url": "./assets/phone_case.png",
             "description": "Modelisation of a phone case for my phone",
             "link": "none"
         },
         {
             "project_name": "3D model - support",
-            "imgage_url": "./assets/tringle_support.png",
+            "image_url": "./assets/tringle_support.png",
             "description": "To fix my curtain rod I modeled a support adapted to the configuration of the window (no place for a regular one)",
             "link": "none"
         },
         {
             "project_name":"Game Developer's project - My Itch.io page",
-            "imgage_url":"./assets/Page_itch_io.png",
+            "image_url":"./assets/Page_itch_io.png",
             "description":"A link to my itch.io page, a platform for game developers",
             "link":"https://l-melanie.itch.io"
         }

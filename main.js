@@ -73,14 +73,14 @@ function switchProject(direction, current_project) {
 }
 
 function updateSection() {
-    project_image.src = current_project.imgage_url;
+    project_image.src = current_project.image_url;
     project_div.querySelector("h2").textContent = current_project.project_name;
     project_div.querySelector("p").textContent = current_project.description;
     if (current_project.link === "none") {
         project_div.querySelector("a").textContent = "";
     } else {
         project_div.querySelector("a").href = current_project.link;
-        project_div.querySelector("a").textContent = "Link to the github project";
+        project_div.querySelector("a").textContent = "Link to the project";
     }
     updateSelectedDot();
 }

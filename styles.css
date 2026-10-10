@@ -3,9 +3,9 @@
     padding: 0;
     --shadow: #000;
     --text: #fff;
-    --primary:#c7a27c;
-    --secondary: #ccd7c5;
-    --shadow-border:#8f6c78;
+    --primary:#8cc77c;
+    --secondary: #c0d8b2;
+    --shadow-border:#708f6c;
 }
 
 header {
@@ -16,6 +16,9 @@ header {
     color: var(--text);
     text-shadow: 2px 2px 4px var(--shadow);
     gap:10px;
+    height: 25vh;
+    background-image: url("./assets/green-background.jpg");
+    background-size: cover;
 }
 
 header img {
